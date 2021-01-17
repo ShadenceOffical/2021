@@ -1,0 +1,70 @@
+RewriteEngine On
+RewriteBase /
+
+#задание 1
+# Redirect /index.php /test.php
+
+#задание 3
+# Redirect /index.php /http://site.com.
+
+#задание 5
+#RewriteRule dir1/ index1.php
+#RewriteRule dir2/ index2.php
+
+#задание 7
+# RewriteRule (.+)\.php /index.php
+
+#задание 9
+# RewriteRule (.+)\.html /$1.php
+
+#задание 11
+# RedirectMatch /index([1-3])\.php /$1.php
+
+#задание 13
+# RedirectMatch /(.+)?(dir)(.+)?/ /index.php
+
+#задание15
+#RedirectMatch /test([0-9]).php /index.php
+
+#задание 17
+# RedirectMatch /([0-9]+)/ /index.php
+
+#задание 19
+# RewriteRule !(.+)\.html  index.php
+
+#задание 21
+# RewriteCond %{REQUEST_URI} \.html$
+# RewriteRule .+  index.php
+
+#задание 23
+# RewriteCond %{REQUEST_URI} \.html$
+# RewriteCond %{REQUEST_URI} ^/content/
+# RewriteRule .+  index.php
+
+#задание 25
+# RewriteCond %{REQUEST_URI} \.css$ [OR]
+# RewriteCond %{REQUEST_URI} ^/styles/
+# RewriteRule .+  index.php
+
+#задание 27
+# RewriteCond %{REQUEST_FILENAME} !-f
+# RewriteRule .+  index.php
+
+#задание 29
+# RewriteCond %{REQUEST_FILENAME} !-d
+# RewriteRule .+  index.php
+
+#задание 31
+# RewriteCond %{REQUEST_FILENAME} !-f
+# RewriteCond %{REQUEST_FILENAME} !-d
+# RewriteRule .+  index.php
+
+#задание 33
+# RewriteCond %{REQUEST_URI} !^/index\.php$
+# RewriteRule (.+)  index.php?get=$1
+
+#задание 35
+# RewriteRule test.php  index.php?get=1 [NC]
+
+#задание 37
+deny from all
